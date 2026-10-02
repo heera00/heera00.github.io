@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myshop | Starter Storefront</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content container">
+        <div>
+          <p class="eyebrow">myshop</p>
+          <h1>Starter Storefront for GitHub Pages</h1>
+          <p class="subtitle">Browse products, filter by category, and manage your cart in a polished static storefront.</p>
+        </div>
+        <button id="cart-toggle" class="cart-toggle" aria-expanded="false" aria-controls="cart-panel">
+          Cart (<span id="cart-count">0</span>)
+        </button>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <section class="catalog" aria-label="Product catalog">
+        <div class="controls">
+          <label>
+            Search
+            <input id="search-input" type="search" placeholder="Search products" />
+          </label>
+
+          <label>
+            Category
+            <select id="category-filter">
+              <option value="all">All</option>
+            </select>
+          </label>
+        </div>
+
+        <p id="results-count" class="results-count"></p>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+
+      <aside id="cart-panel" class="cart" aria-label="Shopping cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-summary">
+          <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+          <button id="clear-cart" class="button button--secondary">Clear Cart</button>
+          <button id="checkout" class="button">Checkout</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <p>Static demo storefront built for GitHub Pages.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
